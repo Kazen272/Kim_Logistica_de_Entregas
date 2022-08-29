@@ -1,5 +1,5 @@
 <?php
-
+//Você deverá alterar o valor setado para a variavel $host conforme o IP do seu servidor;
 $host = "localhost";
 $bdname = "app";
 
