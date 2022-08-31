@@ -8,8 +8,8 @@ require "../app/database/connect.php";
 
 
 
-$email = $_POST['email'];
-$password = $_POST['senha'];
+$email = (isset ($_POST['user_email']));
+$password =(isset ($_POST['user_password']));
 $ativo=1;
 
 
