@@ -18,25 +18,12 @@ $ativo=1;
 
         $result = $pdo -> query($sql);
 
-        $rows = $result->fetch_assoc();
+        $rows = $result->num_rows;
 
-        if ( $rows['user_active'] == 1){
-
-
-            $usuario = $sql->fetch_Assoc();
-
-            if (!isset($_SESSION)){
-                session_start();
-            }
-            $_SESSION['id_user'] = $usuario ['id_user'];
-            $_SESSION['user_name'] = $usuario ['user_name'];
-
-            header("location: dashboard.html");
-        } else {
-            echo "falha ao logar! E-mail ou senha incorretos ";
-
+        if ( $rows == 1){
+            $retorno = array('codigo' => '1');
+            echo json_encode($retorno);
         }
-
 
 
 

@@ -1,25 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    
-    <H1>BEM VINDO AO MEU SITE</H1>
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style type="text/css">
+    .margin-top-md{
+        margin-top: 25px;
+    }
+    </style>
+</head>
+<body>   
+    <div class="container">    
+        <div id="loginbox" class="mainbox col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 margin-top-md">                    
+            <div class="panel panel-primary" >
+                <div class="panel-heading">
+                    <div class="panel-title">Menu - Olá (<?= $_SESSION['nome'] ?>)</div>
+                </div>     
+ 
+                <div class="col-sm-12 controls margin-top-md">
+                  <a href="../sistema/login.html" class="btn-lg btn-danger">Sair </a>
+                </div>
+            </div>  
+        </div>
+    </div> 
+</div>
+</body>
 </html>

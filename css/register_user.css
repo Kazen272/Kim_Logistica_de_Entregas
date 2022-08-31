@@ -1,7 +1,7 @@
 body, html{
    height: 100%;
   background-repeat: no-repeat;
-  background-color: #77c2da;
+  background-color: #1c134b;
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -35,7 +35,7 @@ input::-webkit-input-placeholder {
 }
 
 .main-login{
-  background-color: #fff;
+  background-color:#d9cdcd;
   /* shadows and rounded borders */
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
