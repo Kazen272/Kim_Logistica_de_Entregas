@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #78ceeb;
+    background-color: #060e11;
     height: 100vh;
   }
   #login .container #login-row #login-column #login-box {
@@ -9,7 +9,7 @@ body {
     max-width: 600px;
     height: 320px;
     border: 1px solid #9c9c9c;
-    background-color: #EAEAEA;
+    background-color: #2d2193;
   }
   #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;

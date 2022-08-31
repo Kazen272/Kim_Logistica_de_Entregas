@@ -8,8 +8,8 @@ require "../app/database/connect.php";
 
 
 
-$email = (isset ($_POST['user_email']));
-$password =(isset ($_POST['user_password']));
+$email = (isset ($_POST['email']));
+$password =(isset ($_POST['senha']));
 $ativo=1;
 
 
@@ -23,7 +23,7 @@ $ativo=1;
         if ( $rows['user_active'] == 1){
 
 
-            $usuario = $sql->fetch_assoc();
+            $usuario = $sql->fetch_Assoc();
 
             if (!isset($_SESSION)){
                 session_start();
