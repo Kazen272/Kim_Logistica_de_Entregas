@@ -28,13 +28,13 @@ while($row_entregas = $result_entregas->fetch(PDO::FETCH_ASSOC)){
     //extract serve para conseguir pegar a coluna do bd como uma chave do array e usar como variavel
     extract($row_entregas);
     $registro_entregas = [];
-    $registro_entregas[] = $logistic_order_id;
-    $registro_entregas[] = $logistic_order_client;
-    $registro_entregas[] = $logistic_order_number;
-    $registro_entregas[] = $logistic_order_origin_address;
-    $registro_entregas[] = $logistic_order_destiny_address;
-    $registro_entregas[] = $logistic_order_fleet;
-    $registro_entregas[] = $logistic_order_createdTime;
+    $registro_entregas[] = [$logistic_order_id];
+    $registro_entregas[] = [$logistic_order_client];
+    $registro_entregas[] = [$logistic_order_number];
+    $registro_entregas[] = [$logistic_order_origin_address];
+    $registro_entregas[] = [$logistic_order_destiny_address];
+    $registro_entregas[] = [$logistic_order_fleet];
+    $registro_entregas[] = [$logistic_order_createdTime];
     $dados[] = $registro_entregas;
 }
     //var_dump($dados);
