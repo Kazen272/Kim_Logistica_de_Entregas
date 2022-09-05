@@ -43,7 +43,7 @@ while($row_entregas = $result_entregas->fetch(PDO::FETCH_ASSOC)){
 
 //Cria o objeto de informações/ um array de informações a serem retornadas ao JS
 $resultado = [
-    "draw" => intval($dados_requisicao ['draw']), //para cada requisição será enviado um número como parâmetro
+   // "draw" => intval($dados_requisicao ['draw']), //para cada requisição será enviado um número como parâmetro
     "recordsTotal" => intval($row_qnt_entregas['qnt_entregas']), //Quantidades de registros que há no BD
     "recordsFiltered" => intval($row_qnt_entregas['qnt_entregas']), // Total de registros quando houver pesquisas
     "data" => $dados // Array de dados retornados com os registros da tabela usuarios
