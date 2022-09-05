@@ -1,7 +1,7 @@
 body, html{
    height: 100%;
   background-repeat: no-repeat;
-  background-color: #1c134b;
+  background-color: #827b7b;
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -17,7 +17,7 @@ h1.title {
 
 hr{
  width: 10%;
- color: #fff;
+ color: rgb(255, 255, 255);
 }
 
 .form-group{
@@ -35,7 +35,7 @@ input::-webkit-input-placeholder {
 }
 
 .main-login{
-  background-color:#d9cdcd;
+  background-color:#ffffff;
   /* shadows and rounded borders */
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
