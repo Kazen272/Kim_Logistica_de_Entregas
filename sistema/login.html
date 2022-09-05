@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Kim Logistica</title>
-
-    <!-- Links do form-->>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>]
-    <!--Css da página-->>
     <link rel="stylesheet" href="../css/login.css">
+    <!-- Links do form-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--Css da página-->
+    <link rel="stylesheet" href="../css/login.css">
+    
 
 </head>
 <body>
@@ -23,16 +22,16 @@
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
                             <div class="form-group">
-                                <label for="E-mail" class="text-info">E-mail:</label><br>
+                                <label id="email" for="E-mail" class="text-info">E-mail:</label><br>
                                 <input type="text" name="E-mail" id="email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Senha:</label><br>
+                                <label id="senha" for="password" class="text-info">Senha:</label><br>
                                 <input type="password" name="password" id="senha" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Lembre-se</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
+                                <input id="btn-entrar" type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
                             </div>
                             <div id="register-link" class="text-right">
                                 <a href="../sistema/register_user.html" class="text-info">Cadastre-se</a>
@@ -44,4 +43,6 @@
         </div>
     </div>
 </body>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
