@@ -4,7 +4,7 @@ require ('../app/database/connect.php');
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = MD5 ($_POST['senha']);
 $active = '1';
 
 
