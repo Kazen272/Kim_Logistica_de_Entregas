@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Ago-2022 às 23:40
+-- Tempo de geração: 02-Set-2022 às 17:04
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -24,6 +24,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `client`
+--
+
+CREATE TABLE `client` (
+  `id_client` int(11) NOT NULL,
+  `client_name` varchar(100) NOT NULL,
+  `client_address` varchar(180) NOT NULL,
+  `client_phone` varchar(14) NOT NULL,
+  `client_cpf` varchar(11) NOT NULL,
+  `client_active` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `fleet`
+--
+
+CREATE TABLE `fleet` (
+  `id_fleet` int(11) NOT NULL,
+  `fleet_name` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `fleet_address` varchar(180) CHARACTER SET latin1 NOT NULL,
+  `fleet_active` int(11) NOT NULL,
+  `fleet_phone` varchar(14) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `logistic_order`
+--
+
+CREATE TABLE `logistic_order` (
+  `logistic_order_id` int(11) NOT NULL,
+  `logistic_order_client` int(11) NOT NULL,
+  `logistic_order_number` int(11) NOT NULL,
+  `logistic_order_origin_address` varchar(180) CHARACTER SET latin1 NOT NULL,
+  `logistic_order_destiny_address` varchar(180) CHARACTER SET latin1 NOT NULL,
+  `logistic_order_fleet` int(11) NOT NULL,
+  `logistic_order_createdTime` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `user`
 --
 
@@ -40,12 +85,32 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `user_name`, `user_email`, `user_password`, `user_active`) VALUES
-(1, 'Carlos', 'carlos@teste.com', 'ceduardo16', 1),
-(2, 'fsafasf', 'asfasfas', 'fasfasf', 1);
+(4, 'Carlos', 'admin@admin.com.br', '1234', 1),
+(5, 'carlos', 'eduardo', 'duarte', 1),
+(6, 'Carlos', 'cadudps@gmail.com', 'Ceduardo16', 1),
+(7, 'teste', 'admin@teste.com', 'teste', 1);
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id_client`);
+
+--
+-- Índices para tabela `fleet`
+--
+ALTER TABLE `fleet`
+  ADD PRIMARY KEY (`id_fleet`);
+
+--
+-- Índices para tabela `logistic_order`
+--
+ALTER TABLE `logistic_order`
+  ADD PRIMARY KEY (`logistic_order_id`);
 
 --
 -- Índices para tabela `user`
@@ -58,10 +123,28 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT de tabela `client`
+--
+ALTER TABLE `client`
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `fleet`
+--
+ALTER TABLE `fleet`
+  MODIFY `id_fleet` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `logistic_order`
+--
+ALTER TABLE `logistic_order`
+  MODIFY `logistic_order_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

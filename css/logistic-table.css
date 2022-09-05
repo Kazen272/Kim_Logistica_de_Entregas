@@ -1,0 +1,11 @@
+#logistic-table tr{
+        border: 1px solid black;
+}
+
+#logistic-table td{
+    border: 1px solid black;
+}
+
+#logistic-table{
+    align: center ;
+}
