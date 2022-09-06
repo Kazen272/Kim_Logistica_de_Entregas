@@ -5,7 +5,7 @@ $('document').ready(function(){
 		var senha =$("#login-senha").val();
 		$.ajax({
 			type : 'POST',
-			url  : 'login.php',
+			url  : '../sistema/login.php',
 			data :{
 				email:email,
 				senha:senha
@@ -17,14 +17,11 @@ $('document').ready(function(){
 			},
 			success :  function(response){						
 				if(response.codigo == "1"){	
-					$("#btn-login").html('Entrar');
-					$("#login-alert").css('display', 'none')
-					window.location.href = "../sistema/dashboard.html";
+					window.location.href = "dashboard.html";
 				} else
 					{			
 						$("#btn-login").html('Entrar');
-						$("#login-alert").css('display', 'block')
-						$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
+						$("#mensagem").html(alert('Deu Ruim') + response.mensagem);
 					}
 			}
 		});	

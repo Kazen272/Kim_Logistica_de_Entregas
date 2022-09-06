@@ -1,26 +1,16 @@
 <?php
 
-//conexão com o banco
+//Chamando a conexão com o banco
 require ('../app/database/connect.php');
 
-//
 
-
-//passo 1 seria receber esses dados via post e atribuir a uma variavel para conseguir manipular
-
-//
+//Receber os dados via post e atribuir a uma variável
 $email = $_POST['email']; 
 $senha = MD5 ($_POST['senha']);
 $active =1;
-//valida se email e senha não vieram vazios
-if (empty($email) || empty($senha)):
-    $resposta[] = ['mensagem' => "Email e Senha precisam ser preenchidos"];
-    echo json_encode($resposta);
-    exit();
-endif;
 
 
-//Validação do login no bd
+// validando se o usuário está cadastrado no banco de dados
 $validacao_login = "SELECT `user_email`,`user_password`,`user_active` 
 FROM user 
 WHERE `user_email`='$email' AND `user_password`='$senha' AND `user_active`='$active';";
@@ -34,8 +24,17 @@ $num_linhas = $result_login->rowCount();
 //var_dump($num_linhas);
 
 
-if  ($num_linhas == 1) {
-   
-} 
 
+// validação de usuario ativo
+if ($result_login [`user_active`] == $active):
+    $resposta [] = ['codigo'=>1,'mensagem'=> 'usuário ativo'];
+    echo json_encode($resposta);
+    exit();
+endif;
 
+//validação de usuario cadastrado no banco de dados
+if  ($num_linhas == 1):
+    $resposta[] = ['codigo'=> 2, 'mensagem' => 'usuário cadastrado no banco de dados'];
+    echo json_encode($resposta);
+    exit();
+endif;
