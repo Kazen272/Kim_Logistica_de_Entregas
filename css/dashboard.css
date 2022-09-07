@@ -1,0 +1,18 @@
+#logistic-table_wrapper{
+    width: 90%;
+    margin: auto;
+    top: 250px;
+}
+
+#sorting{
+    text-align: center;
+}
+
+#logistic-table tr{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#logistic-table td{
+border: 1px solid black;
+}
