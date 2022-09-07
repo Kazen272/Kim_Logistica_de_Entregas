@@ -2,9 +2,6 @@ $("#btn-cadastro").on("click",function(){
 	var nome = $("#username").val();
 	var email = $("#email").val();
 	var senha = $("#password").val();
-	
-	console.log(nome + "-" + email + "-" + "-" + senha )
-
 	$.ajax({
 		type : 'POST',
 		url  : 'register_user.php',
@@ -18,5 +15,9 @@ $("#btn-cadastro").on("click",function(){
 		}
 	}).done(function (e){
 		$("#resposta").html("Dados cadastrados com sucesso!")
-	})
-})
+	});
+});
+
+
+
+

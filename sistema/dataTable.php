@@ -56,7 +56,7 @@ while($row_entregas = $result_entregas->fetch(PDO::FETCH_ASSOC)){
     $registro_entregas[] = [$logistic_order_destiny_address];
     $registro_entregas[] = [$logistic_fleet_name];
     $registro_entregas[] ='<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
      Status
     </button>
     <ul class="dropdown-menu dropdown-menu-dark">
@@ -66,7 +66,7 @@ while($row_entregas = $result_entregas->fetch(PDO::FETCH_ASSOC)){
       <li><a class="dropdown-item" href="#">Finalizado</a></li>
     </ul>
   </div>';
-    $registro_entregas[] = '';
+    $registro_entregas[] = '<button type="button" class="btn btn-dark">Editar</button>';
     $dados[] = $registro_entregas;
 }
 
