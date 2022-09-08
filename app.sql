@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Set-2022 às 17:04
+-- Tempo de geração: 08-Set-2022 às 08:14
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -63,8 +63,18 @@ CREATE TABLE `logistic_order` (
   `logistic_order_origin_address` varchar(180) CHARACTER SET latin1 NOT NULL,
   `logistic_order_destiny_address` varchar(180) CHARACTER SET latin1 NOT NULL,
   `logistic_order_fleet` int(11) NOT NULL,
-  `logistic_order_createdTime` int(11) NOT NULL
+  `logistic_order_createdTime` datetime NOT NULL DEFAULT current_timestamp(),
+  `logistic_client_name` varchar(100) NOT NULL,
+  `logistic_fleet_name` varchar(100) NOT NULL,
+  `logistic_order_status` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `logistic_order`
+--
+
+INSERT INTO `logistic_order` (`logistic_order_id`, `logistic_order_client`, `logistic_order_number`, `logistic_order_origin_address`, `logistic_order_destiny_address`, `logistic_order_fleet`, `logistic_order_createdTime`, `logistic_client_name`, `logistic_fleet_name`, `logistic_order_status`) VALUES
+(3, 15, 2510, 'cavalhada', 'hipica', 13, '2022-09-06 19:11:43', 'fulano', 'Carlos', 1);
 
 -- --------------------------------------------------------
 
@@ -85,10 +95,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `user_name`, `user_email`, `user_password`, `user_active`) VALUES
-(4, 'Carlos', 'admin@admin.com.br', '1234', 1),
-(5, 'carlos', 'eduardo', 'duarte', 1),
-(6, 'Carlos', 'cadudps@gmail.com', 'Ceduardo16', 1),
-(7, 'teste', 'admin@teste.com', 'teste', 1);
+(9, 'Carlos', 'cadudps@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 1),
+(10, 'Carlos', 'cadudps@gmail.com', '821a588f4faec997530027ee0b713484', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -138,13 +146,13 @@ ALTER TABLE `fleet`
 -- AUTO_INCREMENT de tabela `logistic_order`
 --
 ALTER TABLE `logistic_order`
-  MODIFY `logistic_order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `logistic_order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,8 +3,8 @@ $(document).ready(function(){
         "processing": true,
         "serverside": true,
         ajax: {
-            url: 'datatable.php',
+            url: 'dataTable.php',
             type: 'POST',
-        }
+            }
     });
 });

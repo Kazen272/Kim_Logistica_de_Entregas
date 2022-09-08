@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- CSS da Página -->
-    <link rel="stylesheet" href="../css/logistic-table.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <!-- CSS da dataTable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
@@ -31,7 +31,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Solicitar Entrega</a>
@@ -53,22 +53,26 @@
                 </nav>
         </div>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
+    
+    <!--modal de criação de entregas-->
+    <button id="" type="button" class="btn btn-dark btn-lg" data-bs-dismiss="modal">
+        Crie a Entrega
+    </button>
+
+
     <main>
-        <div alingn="center">
-            <table id="logistic-table"  class="display" style="width: 100%;">
-                <thead>
+        <div id="logistic-table-position">
+            <table id="logistic-table"  class="table" style="width: 100%;">
+                <thead class="table-dark">
                   <tr>
-                    <th id="data-hora" >Data/Hora</th>
-                    <th id="codigo" >Código</th>
-                    <th id="cliente" >Cliente</th>
-                    <th id="coleta" >Coleta</th>
-                    <th id="entrega" >Entrega</th>
-                    <th id="entregador" >Entregador</th>
-                    <th id="status" >Status</th>
+                    <th>Entrada</th>
+                    <th>Código</th>
+                    <th>Cliente</th>
+                    <th>Coleta</th>
+                    <th>Entrega</th>
+                    <th>Entregador</th>
+                    <th>Status</th>
+                    <th>Editar</th>
                   </tr>
                 </thead>
             </table>    
@@ -76,8 +80,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="../js/dataTable_dashboard.js"></script>
-        
- 
     </main>
     
 

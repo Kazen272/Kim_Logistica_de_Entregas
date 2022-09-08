@@ -1,0 +1,23 @@
+#criar-entregas{
+    top: 250px;
+}
+
+
+#logistic-table_wrapper{
+    width: 90%;
+    margin: auto;
+    top: 400px;
+}
+
+#sorting{
+    text-align: center;
+}
+
+#logistic-table tr{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#logistic-table td{
+border: 1px solid black;
+}
