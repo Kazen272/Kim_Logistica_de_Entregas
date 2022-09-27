@@ -39,16 +39,16 @@
                             <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#janela-modal">Solicitar Entrega</a>
+                            <a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#modal-solicitar-Entregas">Solicitar Entrega</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Cadastros
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Cliente </a></li>
-                            <li><a class="dropdown-item" href="#">Entregadores</a></li>
-                            <li><a class="dropdown-item" href="#">Usuários</a></li>
+                            <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modal-cadastro-clientes" >Cliente </a></li>
+                            <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modal-cadastro-entregadores" >Entregadores</a></li>
+                            <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modal-cadastro-usuarios" >Usuários</a></li>
                             </ul>
                         </li>
                         </ul>
@@ -61,7 +61,7 @@
            
     </header>
     <main>
-        <div id="janela-modal" class="modal t-modal primary">
+        <div id="modal-solicitar-Entregas" class="modal t-modal primary">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     
@@ -93,12 +93,12 @@
                                 </div>
 
                                 <fieldset>
-                                    <div>
+                                    <div id="div-coleta">
                                         <label id="texto-modal">Coleta</label>
                                         <input type="text" name="coleta" id="ponto-coleta">
                                     </div>
 
-                                    <div>
+                                    <div id="div-entrega">
                                         <label id="texto-modal">Entrega</label>
                                         <input type="text" name="entrega" id="ponto-entrega">
                                     </div>
@@ -115,8 +115,71 @@
                 </div>
             </div>
         </div>
+
+        <div id="modal-cadastro-clientes" class="modal t-modal primary">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h3 class="modal-title">Cadastro de clientes</h3>
+                        <button id="btn-fechar" type="button" class="btn btn-close" data-bs-dismiss="modal"> </button>                            
+                    </div>
+
+                    <div class="modal-body">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Cadastre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-cadastro-entregadores" class="modal t-modal primary">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h3 class="modal-title">Cadastro de Entregadores</h3>
+                        <button id="btn-fechar" type="button" class="btn btn-close" data-bs-dismiss="modal"> </button>                            
+                    </div>
+
+                    <div class="modal-body">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Cadastre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-cadastro-usuarios" class="modal t-modal primary">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h3 class="modal-title">Cadastro de Usuários</h3>
+                        <button id="btn-fechar" type="button" class="btn btn-close" data-bs-dismiss="modal"> </button>                            
+                    </div>
+
+                    <div class="modal-body">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Cadastre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="container">
+       
+
+
+        <div id="datatable-entregas" class="container">
             <div id="logistic-table-position">
                 <table id="logistic-table"  class="table" style="width: 100%;">
                     <thead class="table-dark">
