@@ -1,6 +1,46 @@
-#criar-entregas{
-    top: 250px;
+
+.t-modal.primary {
+    *{
+        padding: 0;
+        margin:0;
+    } 
 }
+
+.t-modal.primary .modal-title{
+  margin-inline-start: auto;
+}
+.t-modal.primary .modal-header,
+.modal-body, .modal-footer{
+   background-color:#343a40; 
+}
+
+.t-modal.primary .modal-body, 
+.modal-header{
+    color: #ffff;
+}
+
+
+#client-dropdown{
+    top: 0px;
+    margin-inline: auto;
+    width: 297px;
+}
+
+
+
+#fleet-dropdown{
+    top: -54px;
+    margin-inline: auto;
+    width: 15px;
+}
+
+fieldset .div-coleta, .div-entrega label {
+    display: block;
+    width: 10%;
+    float:left;
+  }
+
+
 
 
 #logistic-table_wrapper{
@@ -21,3 +61,6 @@
 #logistic-table td{
 border: 1px solid black;
 }
+
+
+

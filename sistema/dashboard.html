@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>dashboard</title>
 <!-- BOOTSTRAP CSS AND JS HEADER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+
+
     <!-- CSS da Página -->
     <link rel="stylesheet" href="../css/dashboard.css">
     <!-- CSS da dataTable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-
+    <!-- CSS do modal de criação de entregas -->
+    <link rel="stylesheet" href="../css/forms_entregas.css">
 </head>
 <body>
+    
     <header>
         <div>
             <nav class="navbar col-11 m-auto navbar-dark bg-dark fixed-top">
@@ -34,7 +39,7 @@
                             <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Solicitar Entrega</a>
+                            <a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#janela-modal">Solicitar Entrega</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,33 +55,86 @@
                     </div>
                     </div>
                 </div>
-                </nav>
+            </nav>
         </div>
+
+           
     </header>
-    
-    <!--modal de criação de entregas-->
-    <button id="" type="button" class="btn btn-dark btn-lg" data-bs-dismiss="modal">
-        Crie a Entrega
-    </button>
-
-
     <main>
-        <div id="logistic-table-position">
-            <table id="logistic-table"  class="table" style="width: 100%;">
-                <thead class="table-dark">
-                  <tr>
-                    <th>Entrada</th>
-                    <th>Código</th>
-                    <th>Cliente</th>
-                    <th>Coleta</th>
-                    <th>Entrega</th>
-                    <th>Entregador</th>
-                    <th>Status</th>
-                    <th>Editar</th>
-                  </tr>
-                </thead>
-            </table>    
+        <div id="janela-modal" class="modal t-modal primary">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <h3 class="modal-title">Solicite sua Entrega</h3>
+                        <button id="btn-fechar" type="button" class="btn btn-close" data-bs-dismiss="modal"> </button>                            
+                    </div>
+
+                    <div class="modal-body">
+                        <div>
+                            <div id="client-dropdown" class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Cliente
+                                </button>
+                                    <ul 
+                                    </ul>
+                            </div>
+                            <div id="fleet-dropdown" class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Entregadores
+                                </button>
+                                    <ul 
+                                    </ul>
+                            </div>
+                            <form>
+                                <div>
+                                    <label id="texto-modal">Nº da Entrega</label>
+                                    <input type="text" name="coleta" id="numero-entrega">
+                                </div>
+
+                                <fieldset>
+                                    <div>
+                                        <label id="texto-modal">Coleta</label>
+                                        <input type="text" name="coleta" id="ponto-coleta">
+                                    </div>
+
+                                    <div>
+                                        <label id="texto-modal">Entrega</label>
+                                        <input type="text" name="entrega" id="ponto-entrega">
+                                    </div>
+                                </fieldset>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Solicitar Entrega</button>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <div class="container">
+            <div id="logistic-table-position">
+                <table id="logistic-table"  class="table" style="width: 100%;">
+                    <thead class="table-dark">
+                      <tr>
+                            <th>Entrada</th>
+                            <th>Código</th>
+                            <th>Cliente</th>
+                            <th>Coleta</th>
+                            <th>Entrega</th>
+                            <th>Entregador</th>
+                            <th>Status</th>
+                            <th>Editar</th>
+                      </tr>
+                    </thead>
+                </table>    
+            </div>
+        </div>
+        
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="../js/dataTable_dashboard.js"></script>
