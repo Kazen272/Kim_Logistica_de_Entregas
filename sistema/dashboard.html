@@ -83,27 +83,41 @@
                                 <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                  Entregadores
                                 </button>
-                                    <ul 
-                                    </ul>
+
                             </div>
                             <form>
                                 <div>
-                                    <label id="texto-modal">Nº da Entrega</label>
-                                    <input type="text" name="coleta" id="numero-entrega">
+                                    <div class="form-group">
+                                        <label for="numero_entrega" class="cols-sm-2 control-label">Nº da Entrega</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="numero_entrega" id="numero_entrega"  placeholder=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="endereco_coleta" class="cols-sm-2 control-label">Endereço de Coleta</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="endereco_coleta" id="endereco_coleta"  placeholder=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="endereço_entrega" class="cols-sm-2 control-label">Endereço de Entrega</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input class="form-control" name="endereço_entrega" id="endereco_entrega"  placeholder=""/>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <fieldset>
-                                    <div id="div-coleta">
-                                        <label id="texto-modal">Coleta</label>
-                                        <input type="text" name="coleta" id="ponto-coleta">
-                                    </div>
-
-                                    <div id="div-entrega">
-                                        <label id="texto-modal">Entrega</label>
-                                        <input type="text" name="entrega" id="ponto-entrega">
-                                    </div>
-                                </fieldset>
-
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -126,6 +140,48 @@
                     </div>
 
                     <div class="modal-body">
+                        <div>
+                            <div class="form-group">
+                                <label for="nome_cliente" class="cols-sm-2 control-label">Nome do Cliente</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente"  placeholder=""/>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="endereco_cliente" class="cols-sm-2 control-label">Endereço</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="endereco_cliente" id="endereco_cliente"  placeholder=""/>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="telefone_cliente" class="cols-sm-2 control-label">Telefone</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input class="form-control" name="telefone_cliente" id="telefone_cliente"  placeholder="() 99999-9999"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cliente" class="cols-sm-2 control-label">CPF Cliente</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input class="form-control" name="cpf_cliente" id="cpf_cliente"  placeholder="000.000.000-00"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="modal-footer">
@@ -146,6 +202,37 @@
                     </div>
 
                     <div class="modal-body">
+                        <div>
+                            <div class="form-group">
+                                <label for="nome_entregador" class="cols-sm-2 control-label">Nome do Entregador</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="nome_entregador" id="nome_entregador"  placeholder=""/>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="endereco_entregador" class="cols-sm-2 control-label">Endereço</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="endereco_entregador" id="endereco_entregador"  placeholder=""/>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="telefone_entregador" class="cols-sm-2 control-label">Telefone</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input class="form-control" name="telefone_entregador" id="telefone_entregador"  placeholder="() 99999-9999"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="modal-footer">
